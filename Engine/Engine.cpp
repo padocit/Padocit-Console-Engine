@@ -3,12 +3,14 @@
 #include <Windows.h>
 #include <iostream>
 
-// TODO: 구현
+// Singleton
+Engine* Engine::instance = nullptr;
 
 Engine::Engine()
 {
-	targetFrameRate = 60.0f;
-	targetOneFrameTime = 1.0f / targetFrameRate;
+	SetTargetFrameRate(60.0f);
+
+	instance = this;
 }
 
 Engine::~Engine()
@@ -24,17 +26,15 @@ void Engine::Run()
 	LARGE_INTEGER counter;
 	QueryPerformanceCounter(&counter);
 
-	LONGLONG lastFrameCounter = counter.QuadPart;
-	LONGLONG currFrameCounter = 0;
-
-	float deltaTime = 0.0f;
+	int64_t lastFrameCounter = counter.QuadPart;
+	int64_t currFrameCounter = 0;
 
 	while (!quit)
 	{
 		// deltaTime 계산
 		QueryPerformanceCounter(&counter);
 		currFrameCounter = counter.QuadPart;
-		deltaTime += (currFrameCounter - lastFrameCounter) /
+		float deltaTime = (currFrameCounter - lastFrameCounter) /
 			static_cast<float>(frequency.QuadPart);
 
 		if (deltaTime >= targetOneFrameTime)
@@ -43,10 +43,8 @@ void Engine::Run()
 			Update(deltaTime);
 			Render();
 
-			deltaTime = 0.0f;
+			lastFrameCounter = currFrameCounter;
 		}
-
-		lastFrameCounter = currFrameCounter;
 	}
 }
 
@@ -62,4 +60,10 @@ void Engine::Update(float deltaTime)
 
 void Engine::Render()
 {
+}
+
+void Engine::SetTargetFrameRate(float fps)
+{
+	targetFrameRate = fps;
+	targetOneFrameTime = 1.0f / targetFrameRate;
 }
