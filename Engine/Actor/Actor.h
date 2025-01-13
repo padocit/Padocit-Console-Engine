@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Math/Vec2.h"
+
 class Actor
 {
 public:
@@ -9,8 +11,7 @@ public:
 	void Render();
 
 private:
-	int posX;
-	int posY;
+	Vec2 pos;
 
 	bool isActive;
 };

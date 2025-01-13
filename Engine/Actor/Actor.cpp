@@ -1,7 +1,8 @@
+#include "PreCompiledHeader.h"
 #include "Actor.h"
 
 Actor::Actor()
-	: posX(0), posY(0), isActive(true)
+	: pos(0, 0), isActive(true)
 {
 }
 

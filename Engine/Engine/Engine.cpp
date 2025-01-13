@@ -1,7 +1,5 @@
+#include "PreCompiledHeader.h"
 #include "Engine.h"
-
-#include <Windows.h>
-#include <iostream>
 
 // Singleton
 Engine* Engine::instance = nullptr;

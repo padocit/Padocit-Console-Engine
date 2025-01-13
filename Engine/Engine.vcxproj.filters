@@ -24,10 +24,13 @@
     <ClCompile Include="Level\Level.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Actor.cpp">
+    <ClCompile Include="Actor\Actor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Math\Vec2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PreCompiledHeader\PreCompiledHeader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,13 +41,16 @@
     <ClInclude Include="Level\Level.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Actor.h">
+    <ClInclude Include="Actor\Actor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Container\Vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Math\Vec2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PreCompiledHeader\PreCompiledHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
