@@ -1,8 +1,9 @@
 #pragma once
 
+#include "Core.h"
 #include "Math/Vec2.h"
 
-class Actor
+class ENGINE_API Actor
 {
 public:
 	Actor();
@@ -10,7 +11,7 @@ public:
 	void Update(float deltaTime);
 	void Render();
 
-private:
+protected:
 	Vec2 pos;
 
 	bool isActive;

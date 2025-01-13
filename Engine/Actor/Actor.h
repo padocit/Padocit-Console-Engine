@@ -11,7 +11,7 @@ public:
 	void Update(float deltaTime);
 	void Render();
 
-private:
+protected:
 	Vec2 pos;
 
 	bool isActive;

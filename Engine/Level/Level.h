@@ -14,6 +14,6 @@ public:
 	void Update();
 	void Render();
 
-private:
+protected:
 	Vector<Actor*> actors;
 };

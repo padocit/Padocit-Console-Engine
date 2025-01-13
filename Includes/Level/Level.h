@@ -1,9 +1,10 @@
 #pragma once
 
+#include "Core.h"
 #include "Container/Vector.h"
 
 class Actor;
-class Level
+class ENGINE_API Level
 {
 public:
 	Level();
@@ -13,6 +14,6 @@ public:
 	void Update();
 	void Render();
 
-private:
+protected:
 	Vector<Actor*> actors;
 };

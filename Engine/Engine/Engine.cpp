@@ -52,8 +52,8 @@ void Engine::ProcessInput()
 
 void Engine::Update(float deltaTime)
 {
-	// debug¿ë log
-	std::cout << "deltaTime: " << deltaTime << ", FPS: " << 1.0f/deltaTime << std::endl;
+	// debug - FPS log
+	//std::cout << "deltaTime: " << deltaTime << ", FPS: " << 1.0f/deltaTime << std::endl;
 }
 
 void Engine::Render()

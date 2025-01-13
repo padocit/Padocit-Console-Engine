@@ -1,12 +1,14 @@
 #pragma once
 
+#include "Core.h"
+
 struct KeyState
 {
 	bool isKeyDown = false;
 	bool wasKeyDown = false;
 };
 
-class Engine
+class ENGINE_API Engine
 {
 public:
 
