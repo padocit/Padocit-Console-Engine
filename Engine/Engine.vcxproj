@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
+    <ClInclude Include="Container\Vector.h" />
     <ClInclude Include="Engine\Engine.h" />
     <ClInclude Include="Level\Level.h" />
   </ItemGroup>
