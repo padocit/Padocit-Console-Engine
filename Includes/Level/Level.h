@@ -1,10 +1,9 @@
 #pragma once
 
-#include "Core.h"
 #include "Container/Vector.h"
 
 class Actor;
-class ENGINE_API Level
+class Level
 {
 public:
 	Level();

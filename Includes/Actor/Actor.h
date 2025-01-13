@@ -1,9 +1,8 @@
 #pragma once
 
-#include "Core.h"
 #include "Math/Vec2.h"
 
-class ENGINE_API Actor
+class Actor
 {
 public:
 	Actor();

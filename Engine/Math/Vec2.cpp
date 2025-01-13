@@ -1,3 +1,4 @@
+#include "PreCompiledHeader.h"
 #include "Vec2.h"
 
 Vec2::Vec2(int x = 0, int y = 0)
