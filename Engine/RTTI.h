@@ -56,4 +56,4 @@ public:\
 		}\
 	}\
 
-// @Refactor: 성능개선 - typeId 저장 Hashtable 사용
+// TODO: 성능개선 - typeId 저장 Hashtable 사용

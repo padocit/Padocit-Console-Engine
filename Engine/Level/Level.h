@@ -1,10 +1,11 @@
 #pragma once
 
 #include "Core.h"
+#include "RTTI.h"
 #include "Container/Vector.h"
 
 class Actor;
-class ENGINE_API Level
+class ENGINE_API Level : public RTTI
 {
 public:
 	Level();
