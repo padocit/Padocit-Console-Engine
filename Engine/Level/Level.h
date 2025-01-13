@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Container/Vector.h"
+
 class Actor;
 class Level
 {
@@ -12,5 +14,5 @@ public:
 	void Render();
 
 private:
-	// TODO: actors 동적 배열
+	Vector<Actor*> actors;
 };
