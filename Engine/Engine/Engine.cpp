@@ -51,6 +51,11 @@ void Engine::Run()
 	}
 }
 
+void Engine::LoadLevel(Level* newLevel)
+{
+	mainLevel = newLevel;
+}
+
 
 void Engine::ProcessInput()
 {
@@ -97,7 +102,7 @@ void Engine::SetCursorType(const CursorType& cursorType)
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 }
 
-void Engine::SetCursorPos(const Vec2 cursorPos)
+void Engine::SetCursorPos(const Vec2& cursorPos)
 {
 	SetCursorPos(cursorPos.x, cursorPos.y);
 }

@@ -1,11 +1,19 @@
 #pragma once
 
 #include "Core.h"
+#include "Math/Vec2.h"
 
 struct KeyState
 {
 	bool isKeyDown = false;
 	bool wasKeyDown = false;
+};
+
+enum class CursorType
+{
+	NoCursor,
+	SolidCursor,
+	NormalCursor,
 };
 
 class ENGINE_API Engine
@@ -17,7 +25,8 @@ public:
 
 	void Run();
 
-	__forceinline const Engine& Get() const { return *instance; }
+	// Singleton
+	static Engine& Get();
 
 protected:
 
@@ -26,6 +35,12 @@ protected:
 	void Render();
 
 	void SetTargetFrameRate(float fps);
+
+	// Cursor
+	void SetCursorType(const CursorType& cursorType);
+	void SetCursorPos(const Vec2& cursorPos);
+	void SetCursorPos(const int x, const int y);
+
 
 protected:
 	// Singleton

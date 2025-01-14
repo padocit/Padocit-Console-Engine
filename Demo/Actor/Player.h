@@ -1,8 +1,13 @@
 #pragma once
 
-#include "Actor/Actor.h"
+#include "Actor/RenderableActor.h"
 
-class Player : public Actor
+class Player : public RenderableActor
 {
+	GENERATED_BODY(Player, RenderableActor)
+
+public:
+
+private:
 
 };

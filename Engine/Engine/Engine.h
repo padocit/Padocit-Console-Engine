@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core.h"
+#include "Math/Vec2.h"
 
 struct KeyState
 {
@@ -15,6 +16,7 @@ enum class CursorType
 	NormalCursor,
 };
 
+class Level;
 class ENGINE_API Engine
 {
 public:
@@ -23,6 +25,8 @@ public:
 	~Engine();
 
 	void Run();
+	
+	void LoadLevel(Level* newLevel);
 
 	// Singleton
 	static Engine& Get();
@@ -37,7 +41,7 @@ protected:
 
 	// Cursor
 	void SetCursorType(const CursorType& cursorType);
-	void SetCursorPos(const Vec2 cursorPos);
+	void SetCursorPos(const Vec2& cursorPos);
 	void SetCursorPos(const int x, const int y);
 
 
@@ -49,6 +53,8 @@ protected:
 	float targetOneFrameTime = 0.0f; // 목표 프레임시간
 
 	bool quit = false;
+
+	Level* mainLevel = nullptr;
 	
 	KeyState keyStates[255] = { };
 };
