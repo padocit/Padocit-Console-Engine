@@ -8,6 +8,10 @@ class TestLevel : public Level
 	GENERATED_BODY(TestLevel, Level)
 
 public:
+	TestLevel();
+	~TestLevel();
+	
+	virtual void Update() override;
 
 private:
 

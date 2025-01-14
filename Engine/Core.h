@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 // DLL
 #if ENGINE_BUILD_DLL
 #define ENGINE_API __declspec(dllexport)

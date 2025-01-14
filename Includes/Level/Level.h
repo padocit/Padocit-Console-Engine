@@ -14,7 +14,7 @@ public:
 
 	void AddActor();
 
-	void Update();
+	virtual void Update();
 	void Render();
 
 protected:

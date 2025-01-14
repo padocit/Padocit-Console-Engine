@@ -11,7 +11,7 @@ class ENGINE_API Actor : public RTTI
 public:
 	Actor();
 
-	void Update(float deltaTime);
+	virtual void Update(float deltaTime);
 	virtual void Render();
 
 	// Getter/Setter

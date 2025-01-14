@@ -28,15 +28,6 @@ public:
 	
 	void LoadLevel(Level* newLevel);
 
-	// Singleton
-	static Engine& Get();
-
-protected:
-
-	void ProcessInput();
-	void Update(float deltaTime);
-	void Render();
-
 	void SetTargetFrameRate(float fps);
 
 	// Cursor
@@ -44,6 +35,15 @@ protected:
 	void SetCursorPos(const Vec2& cursorPos);
 	void SetCursorPos(const int x, const int y);
 
+protected:
+
+	void ProcessInput();
+	void Update(float deltaTime);
+	void Render();
+
+public:
+	// Singleton
+	static Engine& Get();
 
 protected:
 	// Singleton

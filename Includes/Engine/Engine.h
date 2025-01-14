@@ -16,6 +16,7 @@ enum class CursorType
 	NormalCursor,
 };
 
+class Level;
 class ENGINE_API Engine
 {
 public:
@@ -24,15 +25,8 @@ public:
 	~Engine();
 
 	void Run();
-
-	// Singleton
-	static Engine& Get();
-
-protected:
-
-	void ProcessInput();
-	void Update(float deltaTime);
-	void Render();
+	
+	void LoadLevel(Level* newLevel);
 
 	void SetTargetFrameRate(float fps);
 
@@ -41,6 +35,15 @@ protected:
 	void SetCursorPos(const Vec2& cursorPos);
 	void SetCursorPos(const int x, const int y);
 
+protected:
+
+	void ProcessInput();
+	void Update(float deltaTime);
+	void Render();
+
+public:
+	// Singleton
+	static Engine& Get();
 
 protected:
 	// Singleton
@@ -50,6 +53,8 @@ protected:
 	float targetOneFrameTime = 0.0f; // 목표 프레임시간
 
 	bool quit = false;
+
+	Level* mainLevel = nullptr;
 	
 	KeyState keyStates[255] = { };
 };
