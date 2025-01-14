@@ -7,6 +7,8 @@
 class Actor;
 class ENGINE_API Level : public RTTI
 {
+	GENERATED_BODY(Level, RTTI)
+
 public:
 	Level();
 

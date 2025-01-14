@@ -6,6 +6,8 @@
 
 class ENGINE_API Actor : public RTTI
 {
+	GENERATED_BODY(Actor, RTTI)
+
 public:
 	Actor();
 

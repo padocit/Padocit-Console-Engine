@@ -1,10 +1,13 @@
 #pragma once
 
 #include "Core.h"
+#include "RTTI.h"
 #include "Math/Vec2.h"
 
-class ENGINE_API Actor
+class ENGINE_API Actor : public RTTI
 {
+	GENERATED_BODY(Actor, RTTI)
+
 public:
 	Actor();
 
