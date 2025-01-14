@@ -14,7 +14,7 @@ public:
 
 	void AddActor(Actor* newActor);
 
-	virtual void Update();
+	virtual void Update(float deltaTime);
 	void Render();
 
 protected:

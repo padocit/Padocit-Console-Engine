@@ -11,7 +11,7 @@ public:
 	TestLevel();
 	~TestLevel();
 	
-	virtual void Update() override;
+	virtual void Update(float deltaTime) override;
 
 private:
 

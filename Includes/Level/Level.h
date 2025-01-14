@@ -12,9 +12,9 @@ class ENGINE_API Level : public RTTI
 public:
 	Level();
 
-	void AddActor();
+	void AddActor(Actor* newActor);
 
-	virtual void Update();
+	virtual void Update(float deltaTime);
 	void Render();
 
 protected:

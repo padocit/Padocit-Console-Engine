@@ -3,13 +3,13 @@
 
 TestLevel::TestLevel()
 {
-	//AddActor()
+	AddActor(new Player('A'));
 }
 
 TestLevel::~TestLevel()
 {
 }
 
-void TestLevel::Update()
+void TestLevel::Update(float deltaTime)
 {
 }

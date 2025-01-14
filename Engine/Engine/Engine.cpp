@@ -1,6 +1,7 @@
 #include "PreCompiledHeader.h"
 #include "Engine.h"
 #include "Math/Vec2.h"
+#include "Level/Level.h"
 
 // Singleton
 Engine* Engine::instance = nullptr;
@@ -65,10 +66,18 @@ void Engine::Update(float deltaTime)
 {
 	// debug - FPS log
 	//std::cout << "deltaTime: " << deltaTime << ", FPS: " << 1.0f/deltaTime << std::endl;
+	if (mainLevel)
+	{
+		mainLevel->Update(deltaTime);
+	}
 }
 
 void Engine::Render()
 {
+	if (mainLevel)
+	{
+		mainLevel->Render();
+	}
 }
 
 void Engine::SetTargetFrameRate(float fps)
