@@ -1,5 +1,6 @@
 #include "PreCompiledHeader.h"
 #include "Engine.h"
+#include "Math/Vec2.h"
 
 // Singleton
 Engine* Engine::instance = nullptr;
@@ -69,4 +70,41 @@ void Engine::SetTargetFrameRate(float fps)
 {
 	targetFrameRate = fps;
 	targetOneFrameTime = 1.0f / targetFrameRate;
+}
+
+void Engine::SetCursorType(const CursorType& cursorType)
+{
+	// Cursor Info 설정
+	CONSOLE_CURSOR_INFO info = { };
+	
+	switch (cursorType)
+	{
+	case CursorType::NoCursor:
+		info.dwSize = 1;
+		info.bVisible = FALSE;
+		break;
+	case CursorType::SolidCursor:
+		info.dwSize = 100;
+		info.bVisible = TRUE;
+		break;
+	case CursorType::NormalCursor:
+		info.dwSize = 20;
+		info.bVisible = TRUE;
+		break;
+	}
+
+	// Cursor Info 적용
+	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
+}
+
+void Engine::SetCursorPos(const Vec2 cursorPos)
+{
+	SetCursorPos(cursorPos.x, cursorPos.y);
+}
+
+void Engine::SetCursorPos(const int x, const int y)
+{
+	static HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD coord = { static_cast<short>(x), static_cast<short>(y) };
+	SetConsoleCursorPosition(handle, coord);
 }

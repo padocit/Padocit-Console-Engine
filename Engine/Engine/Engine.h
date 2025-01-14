@@ -8,6 +8,13 @@ struct KeyState
 	bool wasKeyDown = false;
 };
 
+enum class CursorType
+{
+	NoCursor,
+	SolidCursor,
+	NormalCursor,
+};
+
 class ENGINE_API Engine
 {
 public:
@@ -27,6 +34,12 @@ protected:
 	void Render();
 
 	void SetTargetFrameRate(float fps);
+
+	// Cursor
+	void SetCursorType(const CursorType& cursorType);
+	void SetCursorPos(const Vec2 cursorPos);
+	void SetCursorPos(const int x, const int y);
+
 
 protected:
 	// Singleton
