@@ -17,7 +17,8 @@ public:
 
 	void Run();
 
-	__forceinline const Engine& Get() const { return *instance; }
+	// Singleton
+	static Engine& Get();
 
 protected:
 

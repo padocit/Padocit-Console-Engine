@@ -184,6 +184,7 @@ xcopy $(OutDir)*.lib $(SolutionDir)Lib\ /e /y</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Actor\Actor.cpp" />
+    <ClCompile Include="Actor\RenderableActor.cpp" />
     <ClCompile Include="Engine\Engine.cpp" />
     <ClCompile Include="Level\Level.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -197,6 +198,7 @@ xcopy $(OutDir)*.lib $(SolutionDir)Lib\ /e /y</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor\Actor.h" />
+    <ClInclude Include="Actor\RenderableActor.h" />
     <ClInclude Include="Container\Vector.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Engine\Engine.h" />

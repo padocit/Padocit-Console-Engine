@@ -12,11 +12,16 @@ public:
 	Actor();
 
 	void Update(float deltaTime);
-	void Render();
+	virtual void Render();
+
+	// Getter/Setter
+	virtual void SetPos(const Vec2& newPos);
+	inline const Vec2& Pos() const;
 
 protected:
 	Vec2 pos;
 
 	bool isActive;
+	bool isExpired;
 };
 

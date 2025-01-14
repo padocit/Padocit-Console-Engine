@@ -3,6 +3,10 @@
 
 // Singleton
 Engine* Engine::instance = nullptr;
+Engine& Engine::Get()
+{
+	return *instance;
+}
 
 Engine::Engine()
 {
@@ -45,6 +49,7 @@ void Engine::Run()
 		}
 	}
 }
+
 
 void Engine::ProcessInput()
 {
