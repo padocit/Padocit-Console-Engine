@@ -1,9 +1,10 @@
 #pragma once
 
+#include "Core.h"
 #include <iostream>
 
 template<typename T>
-class Vector
+class ENGINE_API Vector
 {
 public:
 	Vector()

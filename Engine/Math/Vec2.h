@@ -1,6 +1,8 @@
 #pragma once
 
-class Vec2
+#include "Core.h"
+
+class ENGINE_API Vec2
 {
 public:
 	Vec2(int x, int y);
